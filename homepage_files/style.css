@@ -1,0 +1,1016 @@
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed,
+figure, figcaption, footer, header, hgroup,
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video, img {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  font-size: 100%;
+  font: inherit;
+  vertical-align: baseline; }
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  @import url('https://rsms.me/inter/inter-ui.css');
+
+article, aside, details, figcaption, figure,
+footer, header, hgroup, menu, nav, section, main {
+  display: block; }
+
+body {
+  line-height: 1; }
+
+ol, ul {
+  list-style: none; }
+
+blockquote, q {
+  quotes: none; }
+
+blockquote:before, blockquote:after,
+q:before, q:after {
+  content: '';
+  content: none; }
+
+table {
+  border-collapse: collapse;
+  border-spacing: 0; }
+
+div.clear {
+  clear: both;
+  line-height: 0;
+  height: 0;
+  font-size: 0;
+  border: 0;
+  margin: 0;
+  padding: 0; }
+
+img, video {
+  display: block; }
+
+i, em {
+  font-style: italic; }
+
+*, *:before, *:after {
+  box-sizing: border-box; }
+
+@media print {
+  * {
+    background: transparent !important;
+    color: #000 !important;
+    box-shadow: none !important;
+    text-shadow: none !important; }
+
+  a,
+  a:visited {
+    text-decoration: underline; }
+
+  a[href]:after {
+    content: " (" attr(href) ")"; }
+
+  abbr[title]:after {
+    content: " (" attr(title) ")"; }
+
+  .ir a:after,
+  a[href^="javascript:"]:after,
+  a[href^="#"]:after {
+    content: ""; }
+
+  pre, blockquote {
+    border: 1px solid #999;
+    page-break-inside: avoid; }
+
+  thead {
+    display: table-header-group;
+    /* h5bp.com/t */ }
+
+  tr, img {
+    page-break-inside: avoid; }
+
+  img {
+    max-width: 100% !important; }
+
+  @page {
+    margin: 0.5cm; }
+  p, h2, h3 {
+    orphans: 3;
+    widows: 3; }
+
+  h2, h3 {
+    page-break-after: avoid; } }
+.media-check {
+  width: 0;
+  height: 0;
+  visibility: hidden;
+  position: absolute;
+  top: -1000px;
+  left: -1000px;
+  text-indent: 30px; }
+  @media (max-width: 1040px) {
+    .media-check {
+      text-indent: 10px; } }
+
+html {
+  width: 100%;
+  height: 100%; }
+
+body {
+  width: 100%;
+  height: 100%;
+  -webkit-text-size-adjust: 100%;
+  zoom: 1;
+  -webkit-font-smoothing: antialiased;
+  background: #fff;
+  color: #000;
+  font-family: 'Inter UI', "Helvetica Neue", Arial, Helvetica, sans-serif;
+  font-size: 7vh;
+  line-height: 1.3em;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+  font-weight: 400;
+  text-transform: uppercase;
+  
+    
+    
+}
+  @media (max-width: 1040px) {
+    body {
+      font-family:'Inter UI', "Helvetica Neue", Arial, Helvetica, sans-serif;
+      font-size: 8vw;
+      line-height: 1.1em; } }
+  @media (min-height: 900px) {
+    body {
+      font-family: 'Inter UI', "Helvetica Neue", Arial, Helvetica, sans-serif;
+      font-size: 60px;
+      line-height: 1.3em; } }
+
+a {
+  color: #000;
+  border: 0;
+  text-decoration: none; }
+
+a:hover {
+  color: #000;
+  border: 0;
+  text-decoration: none; }
+
+::selection {
+  background: #fff;
+  color: #000;
+  text-shadow: none; }
+
+.loading, .loading * {
+  cursor: wait; }
+
+.group:after {
+  content: '';
+  display: table;
+  clear: both; }
+
+#mfPreviewBarShow, #mfPreviewBar {
+  display: none; }
+
+.page-container {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  overflow: hidden;
+  transform: scale(1);
+  transition: transform 400ms;
+  padding-bottom: 100vh; }
+  @media (max-width: 1040px) {
+    .page-container {
+      overflow: scroll;
+      -webkit-overflow-scrolling: touch;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      padding: 7vh 0; } }
+
+@media (max-width: 1040px) {
+  .no-center .page-container {
+    display: block; } }
+
+.video-playing .page-container {
+  transform: scale(1.15); }
+
+.project-container {
+  position: fixed;
+  width: 100vw;
+  height: 100vh;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  opacity: 0;
+  background: none !important; }
+
+.video-container {
+  position: fixed;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0; }
+
+.current-video {
+  opacity: 1; }
+
+.video {
+  transition: -webkit-filter 300ms; }
+
+.playbar {
+  position: fixed;
+  bottom: 5px;
+  left: 0;
+  right: 0;
+  height: 3px;
+  transition: height 160ms;
+  padding-top: 5px;
+  cursor: pointer;
+  opacity: 0;
+  transition: opacity 200ms; }
+
+.video-playing .playbar {
+  opacity: 1; }
+
+.playbar-inner {
+  height: 5px;
+  width: 0px;
+  background: #fff;
+  transition: width 30ms linear;
+  opacity: 0.4; }
+
+.video-playing .video {
+  -webkit-filter: blur(0px); }
+
+.loop {
+  opacity: 0.9; }
+  @media (max-width: 1040px) {
+    .loop {
+      display: none !important; } }
+
+.loading .loop {
+  opacity: 1; }
+
+.video-playing .loop {
+  opacity: 0; }
+
+.main-video {
+  opacity: 0; }
+
+.video-playing .main-video {
+  opacity: 1; }
+
+video {
+  width: 85vw;
+  height: auto;
+  position: fixed;
+  left: 50%;
+  top: 50%;
+  top: 50vh;
+  transform: translate(-50%, -50%) scale(0.6);
+  transition: width 400ms, opacity 400ms, transform 400ms; }
+  @media screen and (min-aspect-ratio: 5 / 3) {
+    video {
+      width: 70vw; } }
+  @media screen and (min-aspect-ratio: 161 / 76) {
+    video {
+      width: 60vw; } }
+  @media (max-width: 1040px) {
+    video {
+      width: 95vw; } }
+  @media screen and (min-width: 700px) and (max-width: 1040px) {
+    video {
+      width: 70vw; } }
+
+.loading video {
+  transform: translate(-50%, -50%) scale(0.7); }
+
+.video-playing video {
+  transform: translate(-50%, -50%) scale(1); }
+
+video {
+  border-radius: 5px; }
+  @media (max-width: 1040px) {
+    video {
+      border-radius: 2px; } }
+
+.info {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: black;
+  font-family: Arial, Helvetica, sans-serif;
+  font-size: 1.6vw;
+  line-height: 1.25em;
+  text-transform: none;
+  color: #fff;
+  visibility: hidden;
+  opacity: 0;
+  transition: opacity 300ms, visibility 300ms; }
+  @media (max-width: 1040px) {
+    .info {
+      font-family: Arial, Helvetica, sans-serif;
+      font-size: 4.5vw;
+      line-height: 1.3em;
+      overflow: auto;
+      -webkit-overflow-scrolling: touch; } }
+  @media screen and (min-width: 700px) and (max-width: 1040px) {
+    .info {
+      font-family: Arial, Helvetica, sans-serif;
+      font-size: 3.5vh;
+      line-height: 1.3em; } }
+
+.info-inner {
+  position: absolute;
+  top: 50%;
+  left: 5vw;
+  transform: translateY(-50%);
+  width: 40vw; }
+  @media (max-width: 1040px) {
+    .info-inner {
+      width: 90vw;
+      top: auto;
+      bottom: 5vw;
+      transform: translateY(0); } }
+  @media screen and (min-width: 700px) and (max-width: 1040px) {
+    .info-inner {
+      width: 40vw; } }
+
+.info-open .info {
+  opacity: 1;
+  visibility: visible; }
+
+.video-playing.mouse-moved.info-open .click-back {
+  visibility: hidden;
+  opacity: 0; }
+
+.loading-icon {
+  position: fixed;
+  top: 5vh;
+  left: 50%;
+  transform: translateX(-50%);
+  color: #fff;
+  z-index: 101;
+  display: block;
+  opacity: 0;
+  visibility: hidden;
+  transition: visibility 300ms, opacity 300ms;
+  width: 40px;
+  height: 40px;
+  font-family: "Arial";
+  font-size: 40px;
+  line-height: 40px;
+  text-align: center; }
+  @media (max-width: 1040px) {
+    .loading-icon {
+      font-family: "Arial";
+      font-size: 8vw;
+      line-height: 40px;
+      top: 3vh !important; } }
+  @media screen and (min-width: 700px) and (max-width: 1040px) {
+    .loading-icon {
+      font-family: "Arial";
+      font-size: 40px;
+      line-height: 40px; } }
+  @media screen and (min-height: 1000px) {
+    .loading-icon {
+      font-family: "Arial";
+      font-size: 40px;
+      line-height: 40px; } }
+
+.loading-icon-inner {
+  display: block;
+  -moz-animation: spinner 1s infinite linear;
+  -ms-animation: spinner 1s infinite linear;
+  -webkit-animation: spinner 1s infinite linear;
+  animation: spinner 1s infinite linear; }
+
+@-moz-keyframes spinner {
+  0% {
+    transform: rotate(0deg); }
+
+  100% {
+    transform: rotate(360deg); } }
+@-ms-keyframes spinner {
+  0% {
+    transform: rotate(0deg); }
+
+  100% {
+    transform: rotate(360deg); } }
+@-webkit-keyframes spinner {
+  0% {
+    transform: rotate(0deg); }
+
+  100% {
+    transform: rotate(360deg); } }
+@keyframes spinner {
+  0% {
+    transform: rotate(0deg); }
+
+  100% {
+    transform: rotate(360deg); } }
+.loading .loading-icon {
+  opacity: 1;
+  visibility: visible; }
+
+.click-back {
+  position: fixed;
+  left: 5vh;
+  top: 5vh;
+  transform: translate(-50%, -20%);
+  color: rgba(255, 255, 255, 0.4);
+  z-index: 101;
+  cursor: pointer;
+  display: block;
+  opacity: 0;
+  visibility: hidden;
+  transition: visibility 300ms, opacity 300ms;
+  font-family: "Helvetica Neue";
+  font-size: 34px;
+  line-height: 40px;
+  font-weight: normal; }
+  @media (max-width: 1040px) {
+    .click-back {
+      font-family: "Arial";
+      font-size: 8vw;
+      line-height: 1.1em;
+      left: 5vw;
+      top: 5vw;
+      transform: translate(0, -20%); } }
+
+.credits-link {
+  position: fixed;
+  bottom: 5vh;
+  left: 5vh;
+  transform: translate(-50%, 20%);
+  color: rgba(255, 255, 255, 0.4);
+  z-index: 101;
+  cursor: pointer;
+  display: block;
+  opacity: 0;
+  visibility: hidden;
+  transition: visibility 300ms, opacity 300ms;
+  font-family: "Helvetica Neue";
+  font-size: 34px;
+  line-height: 40px;
+  font-weight: normal; }
+  @media (max-width: 1040px) {
+    .credits-link {
+      font-family: "Arial";
+      font-size: 8vw;
+      line-height: 1.1em;
+      left: auto;
+      right: 5vw;
+      top: 5vw;
+      bottom: auto;
+      transform: translateY(-20%); } }
+  @media screen and (min-width: 700px) and (max-width: 1040px) {
+    .credits-link {
+      font-family: "Arial";
+      font-size: 40px;
+      line-height: 40px; } }
+  @media screen and (min-height: 1000px) {
+    .credits-link {
+      font-family: "Arial";
+      font-size: 40px;
+      line-height: 40px; } }
+
+.click-back:hover, .credits-link:hover {
+  color: #fff; }
+
+.video-playing.mouse-moved .click-back, .video-playing.mouse-moved .credits-link, .click-back:hover, .credits-link:hover {
+  opacity: 1;
+  visibility: visible; }
+
+@media (max-width: 1040px) {
+  .video-playing .click-back, .video-playing .credits-link {
+    opacity: 1;
+    visibility: visible; } }
+
+.video-playing .cover {
+  position: fixed;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  display: block;
+  z-index: 9; }
+
+.nav {
+  padding: 20vh 5vw;
+  z-index: 2;
+  position: relative; }
+  @media (max-width: 1040px) {
+    .nav {
+      padding: 0vh 5vw; } }
+
+.nav li {
+    
+    font-size: 26px;
+    
+    
+    
+    
+  display: block;
+  opacity: 0;
+  position: relative; }
+  @media (max-width: 1040px) {
+    .nav li {
+      padding: 0.7vh 0; } }
+
+.thumb {
+  position: absolute;
+  z-index: -1;
+  height: auto;
+  opacity: 0;
+  transform: scale(0.99);
+  transition: transform 100ms, opacity 400ms;
+  border-radius: 2px; }
+  @media (max-width: 1040px) {
+    .thumb {
+      display: none !important; } }
+
+.hovered-video .thumb {
+  opacity: 0.9;
+  transform: scale(1); }
+
+.nav li.faded {
+  opacity: 1;
+  transform: translateY(0px); }
+
+.nav li:nth-child(1) {
+  -moz-animation: pageFadeIn 600ms 0ms;
+  -ms-animation: pageFadeIn 600ms 0ms;
+  -webkit-animation: pageFadeIn 600ms 0ms;
+  animation: pageFadeIn 600ms 0ms;
+  -webkit-animation-fill-mode: forwards;
+  -moz-animation-fill-mode: forwards;
+  -ms-animation-fill-mode: forwards;
+  animation-fill-mode: forwards; }
+
+.nav li:nth-child(2) {
+  -moz-animation: pageFadeIn 600ms 60ms;
+  -ms-animation: pageFadeIn 600ms 60ms;
+  -webkit-animation: pageFadeIn 600ms 60ms;
+  animation: pageFadeIn 600ms 60ms;
+  -webkit-animation-fill-mode: forwards;
+  -moz-animation-fill-mode: forwards;
+  -ms-animation-fill-mode: forwards;
+  animation-fill-mode: forwards; }
+
+.nav li:nth-child(3) {
+  -moz-animation: pageFadeIn 600ms 120ms;
+  -ms-animation: pageFadeIn 600ms 120ms;
+  -webkit-animation: pageFadeIn 600ms 120ms;
+  animation: pageFadeIn 600ms 120ms;
+  -webkit-animation-fill-mode: forwards;
+  -moz-animation-fill-mode: forwards;
+  -ms-animation-fill-mode: forwards;
+  animation-fill-mode: forwards; }
+
+.nav li:nth-child(4) {
+  -moz-animation: pageFadeIn 600ms 180ms;
+  -ms-animation: pageFadeIn 600ms 180ms;
+  -webkit-animation: pageFadeIn 600ms 180ms;
+  animation: pageFadeIn 600ms 180ms;
+  -webkit-animation-fill-mode: forwards;
+  -moz-animation-fill-mode: forwards;
+  -ms-animation-fill-mode: forwards;
+  animation-fill-mode: forwards; }
+
+.nav li:nth-child(5) {
+  -moz-animation: pageFadeIn 600ms 240ms;
+  -ms-animation: pageFadeIn 600ms 240ms;
+  -webkit-animation: pageFadeIn 600ms 240ms;
+  animation: pageFadeIn 600ms 240ms;
+  -webkit-animation-fill-mode: forwards;
+  -moz-animation-fill-mode: forwards;
+  -ms-animation-fill-mode: forwards;
+  animation-fill-mode: forwards; }
+
+.nav li:nth-child(6) {
+  -moz-animation: pageFadeIn 600ms 300ms;
+  -ms-animation: pageFadeIn 600ms 300ms;
+  -webkit-animation: pageFadeIn 600ms 300ms;
+  animation: pageFadeIn 600ms 300ms;
+  -webkit-animation-fill-mode: forwards;
+  -moz-animation-fill-mode: forwards;
+  -ms-animation-fill-mode: forwards;
+  animation-fill-mode: forwards; }
+
+.nav li:nth-child(7) {
+  -moz-animation: pageFadeIn 600ms 360ms;
+  -ms-animation: pageFadeIn 600ms 360ms;
+  -webkit-animation: pageFadeIn 600ms 360ms;
+  animation: pageFadeIn 600ms 360ms;
+  -webkit-animation-fill-mode: forwards;
+  -moz-animation-fill-mode: forwards;
+  -ms-animation-fill-mode: forwards;
+  animation-fill-mode: forwards; }
+
+.nav li:nth-child(8) {
+  -moz-animation: pageFadeIn 600ms 420ms;
+  -ms-animation: pageFadeIn 600ms 420ms;
+  -webkit-animation: pageFadeIn 600ms 420ms;
+  animation: pageFadeIn 600ms 420ms;
+  -webkit-animation-fill-mode: forwards;
+  -moz-animation-fill-mode: forwards;
+  -ms-animation-fill-mode: forwards;
+  animation-fill-mode: forwards; }
+
+.nav li:nth-child(9) {
+  -moz-animation: pageFadeIn 600ms 480ms;
+  -ms-animation: pageFadeIn 600ms 480ms;
+  -webkit-animation: pageFadeIn 600ms 480ms;
+  animation: pageFadeIn 600ms 480ms;
+  -webkit-animation-fill-mode: forwards;
+  -moz-animation-fill-mode: forwards;
+  -ms-animation-fill-mode: forwards;
+  animation-fill-mode: forwards; }
+
+.nav li:nth-child(10) {
+  -moz-animation: pageFadeIn 600ms 540ms;
+  -ms-animation: pageFadeIn 600ms 540ms;
+  -webkit-animation: pageFadeIn 600ms 540ms;
+  animation: pageFadeIn 600ms 540ms;
+  -webkit-animation-fill-mode: forwards;
+  -moz-animation-fill-mode: forwards;
+  -ms-animation-fill-mode: forwards;
+  animation-fill-mode: forwards; }
+
+.nav li:nth-child(11) {
+  -moz-animation: pageFadeIn 600ms 600ms;
+  -ms-animation: pageFadeIn 600ms 600ms;
+  -webkit-animation: pageFadeIn 600ms 600ms;
+  animation: pageFadeIn 600ms 600ms;
+  -webkit-animation-fill-mode: forwards;
+  -moz-animation-fill-mode: forwards;
+  -ms-animation-fill-mode: forwards;
+  animation-fill-mode: forwards; }
+
+.nav li:nth-child(12) {
+  -moz-animation: pageFadeIn 600ms 660ms;
+  -ms-animation: pageFadeIn 600ms 660ms;
+  -webkit-animation: pageFadeIn 600ms 660ms;
+  animation: pageFadeIn 600ms 660ms;
+  -webkit-animation-fill-mode: forwards;
+  -moz-animation-fill-mode: forwards;
+  -ms-animation-fill-mode: forwards;
+  animation-fill-mode: forwards; }
+
+.nav li:nth-child(13) {
+  -moz-animation: pageFadeIn 600ms 720ms;
+  -ms-animation: pageFadeIn 600ms 720ms;
+  -webkit-animation: pageFadeIn 600ms 720ms;
+  animation: pageFadeIn 600ms 720ms;
+  -webkit-animation-fill-mode: forwards;
+  -moz-animation-fill-mode: forwards;
+  -ms-animation-fill-mode: forwards;
+  animation-fill-mode: forwards; }
+
+.nav li:nth-child(14) {
+  -moz-animation: pageFadeIn 600ms 780ms;
+  -ms-animation: pageFadeIn 600ms 780ms;
+  -webkit-animation: pageFadeIn 600ms 780ms;
+  animation: pageFadeIn 600ms 780ms;
+  -webkit-animation-fill-mode: forwards;
+  -moz-animation-fill-mode: forwards;
+  -ms-animation-fill-mode: forwards;
+  animation-fill-mode: forwards; }
+
+.nav li:nth-child(15) {
+  -moz-animation: pageFadeIn 600ms 840ms;
+  -ms-animation: pageFadeIn 600ms 840ms;
+  -webkit-animation: pageFadeIn 600ms 840ms;
+  animation: pageFadeIn 600ms 840ms;
+  -webkit-animation-fill-mode: forwards;
+  -moz-animation-fill-mode: forwards;
+  -ms-animation-fill-mode: forwards;
+  animation-fill-mode: forwards; }
+
+.nav li:nth-child(16) {
+  -moz-animation: pageFadeIn 600ms 900ms;
+  -ms-animation: pageFadeIn 600ms 900ms;
+  -webkit-animation: pageFadeIn 600ms 900ms;
+  animation: pageFadeIn 600ms 900ms;
+  -webkit-animation-fill-mode: forwards;
+  -moz-animation-fill-mode: forwards;
+  -ms-animation-fill-mode: forwards;
+  animation-fill-mode: forwards; }
+
+.nav li:nth-child(17) {
+  -moz-animation: pageFadeIn 600ms 960ms;
+  -ms-animation: pageFadeIn 600ms 960ms;
+  -webkit-animation: pageFadeIn 600ms 960ms;
+  animation: pageFadeIn 600ms 960ms;
+  -webkit-animation-fill-mode: forwards;
+  -moz-animation-fill-mode: forwards;
+  -ms-animation-fill-mode: forwards;
+  animation-fill-mode: forwards; }
+
+.nav li:nth-child(18) {
+  -moz-animation: pageFadeIn 600ms 1020ms;
+  -ms-animation: pageFadeIn 600ms 1020ms;
+  -webkit-animation: pageFadeIn 600ms 1020ms;
+  animation: pageFadeIn 600ms 1020ms;
+  -webkit-animation-fill-mode: forwards;
+  -moz-animation-fill-mode: forwards;
+  -ms-animation-fill-mode: forwards;
+  animation-fill-mode: forwards; }
+
+.nav li:nth-child(19) {
+  -moz-animation: pageFadeIn 600ms 1080ms;
+  -ms-animation: pageFadeIn 600ms 1080ms;
+  -webkit-animation: pageFadeIn 600ms 1080ms;
+  animation: pageFadeIn 600ms 1080ms;
+  -webkit-animation-fill-mode: forwards;
+  -moz-animation-fill-mode: forwards;
+  -ms-animation-fill-mode: forwards;
+  animation-fill-mode: forwards; }
+
+.nav li:nth-child(20) {
+  -moz-animation: pageFadeIn 600ms 1140ms;
+  -ms-animation: pageFadeIn 600ms 1140ms;
+  -webkit-animation: pageFadeIn 600ms 1140ms;
+  animation: pageFadeIn 600ms 1140ms;
+  -webkit-animation-fill-mode: forwards;
+  -moz-animation-fill-mode: forwards;
+  -ms-animation-fill-mode: forwards;
+  animation-fill-mode: forwards; }
+
+.nav li:nth-child(21) {
+  -moz-animation: pageFadeIn 600ms 1200ms;
+  -ms-animation: pageFadeIn 600ms 1200ms;
+  -webkit-animation: pageFadeIn 600ms 1200ms;
+  animation: pageFadeIn 600ms 1200ms;
+  -webkit-animation-fill-mode: forwards;
+  -moz-animation-fill-mode: forwards;
+  -ms-animation-fill-mode: forwards;
+  animation-fill-mode: forwards; }
+
+@-moz-keyframes pageFadeIn {
+  0% {
+    opacity: 0;
+    transform: translateY(1.5vh); }
+
+  100% {
+    opacity: 1;
+    transform: translateY(0px); } }
+@-ms-keyframes pageFadeIn {
+  0% {
+    opacity: 0;
+    transform: translateY(1.5vh); }
+
+  100% {
+    opacity: 1;
+    transform: translateY(0px); } }
+@-webkit-keyframes pageFadeIn {
+  0% {
+    opacity: 0;
+    transform: translateY(1.5vh); }
+
+  100% {
+    opacity: 1;
+    transform: translateY(0px); } }
+@keyframes pageFadeIn {
+  0% {
+    opacity: 0;
+    transform: translateY(1.5vh); }
+
+  100% {
+    opacity: 1;
+    transform: translateY(0px); } }
+.nav li.small a {
+  font-family: 'Inter UI', "Helvetica Neue", Arial, Helvetica, sans-serif;
+  font-size: 5.5vh;
+  line-height: 1em;
+  padding-bottom: 4vh;
+  display: inline-block;
+  color: #000;
+  font-weight: 700;
+    
+}
+  @media (max-width: 1040px) {
+    .nav li.small a {
+      font-family: 'Inter UI', "Helvetica Neue", Arial, Helvetica, sans-serif;
+      font-size: 4.5vw;
+      line-height: 1.3em;
+      padding-bottom: 1vh; } }
+  @media (min-height: 900px) {
+    .nav li.small a {
+      font-family: 'Inter UI', "Helvetica Neue", Arial, Helvetica, sans-serif;
+      font-size: 32px;
+      line-height: 1em; } }
+
+.nav li.small a:hover {
+  color: #2358cf; }
+
+.nav a {
+  display: inline-block;
+  transition: opacity 300ms, transform 400ms;
+  -webkit-tap-highlight-color: transparent !important;
+  -webkit-tap-highlight-color: transparent !important;
+  touch-action: manipulation;
+  position: relative; }
+
+.nav a.clicked span {
+  opacity: 0.2;
+  display: block; }
+  @media (max-width: 1040px) {
+    .nav a.clicked span {
+      display: block; } }
+
+.nav a.current-link span {
+  opacity: 1;
+  display: block; }
+
+.loading .nav a:hover, .video-playing .nav a:hover {
+  color: #000; }
+
+.loading li a, .video-playing li a {
+  opacity: 0; }
+
+.nav h3, .nav a.clicked.current-link h3 {
+  display: inline;
+  color: #000; 
+    font-weight: 700;
+}
+
+.nav h4, .nav a.clicked.current-link h4 {
+  display: inline;
+  color: #a3a3a3;
+  font-family: 'Old Standard TT', serif;
+      text-transform: none;
+
+    
+}
+  @media (max-width: 1040px) {
+    .nav h4, .nav a.clicked.current-link h4 {
+      display: block; } }
+
+.nav a.clicked h3, .nav a.clicked h4 {
+  color: #000; }
+
+.nav a:hover h3, .nav a:active h3, .nav a.clicked.current-link h3 {
+  color: #2358cf; }
+
+.nav a:not(.clicked):hover h4, .nav a:active h4 {
+  color: #888; }
+
+.nav li a.current-link, .nav a.current-link:hover {
+  opacity: 1; }
+
+.video-playing .nav li a.current-link {
+  opacity: 0; }
+
+.loading .nav li a.current-link, .loading .nav a.current-link:hover, .video-playing .nav li a.current-link, .video-playing .nav a.current-link:hover {
+  color: #fff;
+  transition: opacity 300ms, transform 400ms, color 300ms; }
+
+.bg {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: #111;
+  opacity: 0;
+  transition: opacity 300ms; }
+
+.bg-darken {
+  background: #111;
+  position: fixed;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  opacity: 0;
+  transition: opacity 300ms; }
+
+.video-playing .bg-darken {
+  opacity: 0.9; }
+
+.video-playing .bg {
+  opacity: 1; }
+
+.loading .bg {
+  opacity: 0.85; }
+
+.information {
+  background: black;
+  transition: opacity 300ms, visibility 300ms;
+  position: fixed;
+  font-family: Arial, Helvetica, sans-serif;
+  
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  z-index: 100;
+  opacity: 0;
+  visibility: hidden; }
+  @media (max-width: 1040px) {
+    .information {
+      overflow: auto;
+      -webkit-overflow-scrolling: touch; } }
+
+.information-inner {
+  position: fixed;
+  top: 50%;
+  left: 5vw;
+  transform: translateY(-50%);
+  width: 40vw; }
+  @media (max-width: 1040px) {
+    .information-inner {
+      width: 90vw;
+      top: auto;
+      bottom: 5vw;
+      transform: translateY(0); } }
+  @media screen and (min-width: 700px) and (max-width: 1040px) {
+    .information-inner {
+      width: 40vw; } }
+
+.information-inner p, .information-inner a, .info-inner p, .info-inner a {
+  color: #888;
+  font-family: font-family: Arial, Helvetica, sans-serif;;
+  font-size: 1.2vw;
+  line-height: 1.3em;
+  text-transform: none; }
+  @media (max-width: 1040px) {
+    .information-inner p, .information-inner a, .info-inner p, .info-inner a {
+      font-family: font-family: Arial, Helvetica, sans-serif;
+      font-size: 4.5vw;
+      line-height: 1.3em; } }
+  @media (min-height: 900px) {
+    .information-inner p, .information-inner a, .info-inner p, .info-inner a {
+      font-family:font-family: Arial, Helvetica, sans-serif;
+      font-size: 24px;
+      line-height: 1.25em; } }
+  @media screen and (min-width: 700px) and (max-width: 1040px) {
+    .information-inner p, .information-inner a, .info-inner p, .info-inner a {
+      font-family: font-family: Arial, Helvetica, sans-serif;
+      font-size: 3.5vh;
+      line-height: 1.3em; } }
+
+.information-inner a, .info-inner a {
+  color: #fff; }
+
+.information-inner p + p {
+  margin-top: 1em; }
+
+strong {
+  color: #fff; }
+
+.information-inner a:hover {
+  opacity: 0.8; }
+
+.footer {
+  position: absolute;
+  bottom: 0;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 4.5vw; }
+  @media (max-width: 1040px) {
+    .footer {
+      width: 10vw; } }
+  @media screen and (min-width: 700px) and (max-width: 1040px) {
+    .footer {
+      width: 4.5vw; } }
+
+.footer img {
+  width: 100%;
+  height: auto; }
+
+.information-show .information {
+    
+  opacity: 1;
+  visibility: visible; }
+
+.information-show .click-back {
+  opacity: 1;
+  visibility: visible; }
+
+.info-open .click-back {
+  opacity: 0;
+  visibility: hidden; }
